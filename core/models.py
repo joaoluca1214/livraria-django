@@ -39,6 +39,7 @@ class Livro(models.Model):
     isbn = models.CharField(max_length=32)
     quantidade = models.IntegerField()
     preco = models.DecimalField(max_digits=7, decimal_places=2)
+    autores = models.ManyToManyField(Autor, related_name="livros")
  
     def __str__(self):
         return f'{self.titulo} ({self.quantidade}) - R${self.preco}'
