@@ -14,22 +14,12 @@ SECRET_KEY = 'django-insecure-a5wf@wgqxkp0#0w-ltbz^v+p9l2k@rdbzcsh^*&(z-!4r6eisg
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = []
 CORS_ALLOW_ALL_ORIGINS = True
 
 LANGUAGE_CODE = "pt-br"
 TIME_ZONE = "America/Sao_Paulo"
 
-REST_FRAMEWORK = {
- 'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
-        "rest_framework.permissions.DjangoModelPermissions",
-        
-    ],
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ]
-}
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -41,7 +31,6 @@ INSTALLED_APPS = [
     "corsheaders",
     "rest_framework",   
     "core",
-    'rest_framework_simplejwt',
 ]
 
 MIDDLEWARE = [
@@ -130,6 +119,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
