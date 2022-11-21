@@ -2,9 +2,9 @@ from rest_framework.serializers import ModelSerializer, SlugRelatedField
 
 from core.models import Autor, Categoria, Editora, Livro
 from core.serializers import AutorSerializer, CategoriaSerializer, EditoraSerializer
-
 from uploader.models import Image
 from uploader.serializers import ImageSerializer
+
 
 class LivroSerializer(ModelSerializer):
     capa_attachment_key = SlugRelatedField(
