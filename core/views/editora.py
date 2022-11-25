@@ -1,14 +1,7 @@
-from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import ModelViewSet
 
-from core.models import Autor, Categoria, Editora, Livro
-from core.serializers import (
-    AutorSerializer,
-    CategoriaSerializer,
-    EditoraSerializer,
-    LivroDetailSerializer,
-    LivroSerializer,
-)
+from core.models import Editora
+from core.serializers import EditoraSerializer
 
 
 class EditoraViewSet(ModelViewSet):
